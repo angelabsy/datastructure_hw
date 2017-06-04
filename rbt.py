@@ -267,7 +267,10 @@ class RBTree:
     def blackHeight(self, tree, n=0):
         if tree.val is None:
             return 0
-        elif tree.color == 'Black': 
+        elif tree.color == 'Black':
+            return self.blackHeight(tree.left) + 1
+        else: 
+            return self.blackHeight(tree.left)
         
     def printBlackHeight(self, tree, n = 0):
         print(self.blackHeight(tree, n))
