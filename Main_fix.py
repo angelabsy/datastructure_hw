@@ -23,18 +23,15 @@ def main():
             rbt.delete(-i)
         else:
             break
-    rbt.print(rbt.root, 0)
+    # rbt.print(rbt.root, 0)
     
-    print("Number of Total Node")
     rbt.printTotalNode(rbt.root)
 
-    print("Number of Black Node")
     rbt.printBlackNode(rbt.root)
 
-    print("Black Height")
     rbt.printBlackHeight(rbt.root)
 
-    print("Inorder Traversal")
+    print("Inorder Traversal: ")
     rbt.inOrderTraversal(rbt.root)
 
 main()
