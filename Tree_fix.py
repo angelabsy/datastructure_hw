@@ -7,9 +7,11 @@ class RBT:
 
     def search(self, tree, val):
         if self.root is None:
-            return None # the tree doesn' have any node
+            print("The tree doesn' have any node.")
+            return None 
         if tree.val is None:
-            return None # the node is not in the tree 
+            print("The node", val, " is not in the tree.")
+            return None 
         if tree.val > val:
             return self.search(tree.left, val)
         elif tree.val < val:
@@ -279,7 +281,7 @@ class RBT:
             return self.totalNode(tree.left) + self.totalNode(tree.right) + 1
 
     def printTotalNode(self, tree):
-        print(self.totalNode(tree))
+        print('total = ', self.totalNode(tree))
 
     def blackNode(self, tree):
         if tree.val is None:
@@ -290,7 +292,7 @@ class RBT:
             return self.blackNode(tree.left) + self.blackNode(tree.right)
 
     def printBlackNode(self, tree):
-        print(self.blackNode(tree))
+        print('nb = ', self.blackNode(tree))
 
     def blackHeight(self, tree, n = 0):
         if tree.val is None:
@@ -301,7 +303,7 @@ class RBT:
             return self.blackHeight(tree.left)
 
     def printBlackHeight(self, tree, n = 0):
-        print(self.blackHeight(tree, n))
+        print('bh = ', self.blackHeight(tree, n))
 
     def inOrderTraversal(self, tree):
         if tree.left.val is not None:
