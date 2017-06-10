@@ -1,4 +1,4 @@
-from Node import Node
+from Node_fix import Node
 from Tree_fix import RBT
 
 def main():
